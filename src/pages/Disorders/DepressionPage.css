@@ -1,0 +1,150 @@
+/* Base styles */
+:root {
+    --primary-color: #6a5acd; /* Calming purple */
+    --accent-color: #ff6f61; /* Soothing coral */
+    --neutral-light: #f5f7fa;
+    --text-color: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+  }
+  
+  /* Fullscreen page container */
+  .depression-page {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding: 2rem;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white); /* Ensure the background is white */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  /* Header */
+  .depression-header {
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out logo, nav, and button */
+  }
+  
+  /* Logo */
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color); /* Purple text for contrast */
+  }
+  
+  /* Navbar */
+  .depression-navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .depression-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .depression-nav-links li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+  }
+  
+  .depression-nav-links li a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+    text-decoration: underline;
+  }
+  
+  /* Login Button */
+  .login-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .login-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  /* Page Content */
+  .depression-content {
+    padding-top: 6rem; /* Add padding to account for the navbar height */
+    max-width: 800px; /* Limit content width for better readability */
+    width: 100%;
+  }
+  
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  /* Section Styling */
+  .section {
+    margin-bottom: 3rem;
+  }

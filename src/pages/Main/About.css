@@ -1,0 +1,161 @@
+/* CSS Reset */
+.about * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+.about {
+  padding: 4rem 2rem;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Styling */
+.section {
+  width: 100%;
+  max-width: 1200px; /* Increased for better spacing */
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Headings with Underline */
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section h2:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #e84393;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Description Paragraph */
+.main-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Container for Cards */
+.content-container {
+  width: 100%;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Consistent spacing between cards */
+}
+
+/* Card Styling */
+.card {
+  flex: 0 0 calc(25% - 2rem); /* Makes 4 cards per row with spacing */
+  min-width: 250px; /* Minimum width for smaller screens */
+  background-color: #f5f9fc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Content */
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  flex: 1; /* Makes cards with different text lengths the same height */
+}
+
+/* Team Card Images */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+/* Approach Section Text */
+.approach-content {
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.approach-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-top: 1rem;
+  align-self: flex-start; /* Aligns with the left-aligned text */
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 0 calc(33.333% - 2rem); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 calc(50% - 2rem); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%; /* 1 card per row */
+    max-width: 350px;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,86 @@
+.screening {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.screening-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.screening-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50; /* Darker color for better contrast */
+}
+
+.screening-intro p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333333;
+  line-height: 1.8; /* Improved readability */
+}
+
+.screening-tests {
+  margin-top: 4rem;
+}
+
+.screening-tests h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50; /* Darker color for better contrast */
+  text-align: center;
+}
+
+.test-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center cards horizontally */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.test-card {
+  background-color: #f5f9fc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; /* Fixed width for consistency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+.test-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.test-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50; /* Darker color for better contrast */
+}
+
+.test-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  line-height: 1.6; /* Improved readability */
+}
+
+.test-card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.test-card button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}

@@ -1,0 +1,134 @@
+/* Footer styles - almost white blue background and improved newsletter */
+.footer {
+    background-color: #f0f8ff; /* Almost white blue */
+    color: #2c3e50; /* Dark text for contrast */
+    padding: 2rem 0 1rem 0;
+    margin-top: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: #2c3e50; /* Dark text for contrast */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #4a90e2; /* Brighter blue on hover */
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-media a {
+    color: #2c3e50; /* Dark text for contrast */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: #4a90e2; /* Brighter blue on hover */
+  }
+  
+  .newsletter {
+    max-width: 300px;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50; /* Dark text for contrast */
+  }
+  
+  .newsletter p {
+    font-size: 0.9rem;
+    color: #2c3e50; /* Dark text for contrast */
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-input {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .newsletter input {
+    padding: 0.5rem;
+    border: 1px solid #ccc; /* Light border for input */
+    border-radius: 4px;
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter button {
+    background-color: #4a90e2; /* Bright blue */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter button:hover {
+    background-color: #3a7bc8; /* Slightly darker blue on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(44, 62, 80, 0.1); /* Light border for separation */
+    color: #2c3e50; /* Dark text for contrast */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links, .social-media {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .newsletter {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .newsletter-input {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .newsletter input {
+      width: 80%;
+      margin-bottom: 0.5rem;
+    }
+  
+    .newsletter button {
+      width: 80%;
+    }
+  }

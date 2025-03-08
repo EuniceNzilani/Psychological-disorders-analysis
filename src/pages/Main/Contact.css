@@ -1,0 +1,286 @@
+/* Contact.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.contact {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #333;
+  background-color: white;
+}
+
+/* Contact Intro Section */
+.contact-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-intro h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5c6a79;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+  background-color: white;
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+}
+
+/* Form Styles */
+.contact-form h2, .contact-info h2, .social-links h2, .newsletter h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact-form h2::after, .contact-info h2::after, .social-links h2::after, .newsletter h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: white;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button, .newsletter button, .form-success button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover, .newsletter button:hover, .form-success button:hover {
+  background-color: #2980b9;
+}
+
+.form-error {
+  background-color: #ffeded;
+  color: #e74c3c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.form-success {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.form-success p {
+  font-size: 1.1rem;
+  color: #2ecc71;
+  margin-bottom: 20px;
+}
+
+/* Contact Info Styles */
+.info-item {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.info-item p {
+  color: #5c6a79;
+  font-size: 0.95rem;
+}
+
+/* Social Links Section */
+.social-links {
+  text-align: center;
+  margin-bottom: 60px;
+  background-color: white;
+}
+
+.social-links p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #5c6a79;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Circle size */
+  height: 50px; /* Circle size */
+  border-radius: 50%; /* Full circle */
+  color: white; /* Icon color */
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.social-icon i {
+  font-size: 20px; /* Icon size */
+}
+
+/* Set specific background colors for each social media icon */
+.social-icon[aria-label="Instagram"] {
+  background-color: #E1306C; /* Instagram */
+}
+
+.social-icon[aria-label="WhatsApp"] {
+  background-color: #25D366; /* WhatsApp */
+}
+
+.social-icon[aria-label="X"] {
+  background-color: #000000; /* X (Twitter) */
+}
+
+.social-icon[aria-label="Facebook"] {
+  background-color: #1877F2; /* Facebook */
+}
+
+.social-icon[aria-label="LinkedIn"] {
+  background-color: #0A66C2; /* LinkedIn */
+}
+
+.social-icon[aria-label="Telegram"] {
+  background-color: #0088cc; /* Telegram */
+}
+
+/* Newsletter Section */
+.newsletter {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #5c6a79;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px 0 0 5px;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.newsletter-form button {
+  border-radius: 0 5px 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .newsletter-form input {
+    border-radius: 5px;
+  }
+  
+  .newsletter-form button {
+    border-radius: 5px;
+  }
+
+  .social-icon {
+    width: 40px; /* Adjust for smaller screens */
+    height: 40px; /* Adjust for smaller screens */
+  }
+}

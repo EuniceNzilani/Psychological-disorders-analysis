@@ -1,0 +1,282 @@
+/* Accessibility.css - Specific enhancements for users with psychological disorders */
+
+/* Focus mode - reduces distractions */
+.focus-mode {
+    --focus-opacity: 0.3;
+  }
+  
+  .focus-mode .header,
+  .focus-mode .footer {
+    opacity: var(--focus-opacity);
+    transition: opacity 0.3s ease;
+  }
+  
+  .focus-mode .header:hover,
+  .focus-mode .footer:hover {
+    opacity: 1;
+  }
+  
+  .focus-mode section:not(.active-section) {
+    opacity: var(--focus-opacity);
+  }
+  
+  /* Reading aids */
+  .reading-guide {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .reading-guide-active .reading-guide {
+    display: block;
+  }
+  
+  /* Font adjustments for dyslexia and reading disorders */
+  .dyslexia-friendly {
+    --font-primary: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+    --font-heading: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    line-height: 1.8;
+  }
+  
+  .dyslexia-friendly p {
+    max-width: 66ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Color themes for different needs */
+  .calm-theme {
+    --primary-color: #6b93b0;
+    --primary-light: #c4d7e6;
+    --primary-dark: #4a6f8a;
+    --accent-color: #a1c181;
+    --accent-light: #d5e8c3;
+    --neutral-light: #f8f9fa;
+    --neutral-medium: #e9ecef;
+    --neutral-dark: #495057;
+    --text-color: #343a40;
+    --text-light: #6c757d;
+  }
+  
+  .minimal-theme {
+    --primary-color: #7a899c;
+    --primary-light: #d9e0e8;
+    --primary-dark: #596577;
+    --accent-color: #7a899c;
+    --accent-light: #d9e0e8;
+    --neutral-light: #f8f9fa;
+    --neutral-medium: #e9ecef;
+    --neutral-dark: #343a40;
+    --text-color: #343a40;
+    --text-light: #6c757d;
+  }
+  
+  .high-contrast-theme {
+    --primary-color: #000000;
+    --primary-light: #333333;
+    --primary-dark: #000000;
+    --accent-color: #000000;
+    --accent-light: #333333;
+    --neutral-light: #ffffff;
+    --neutral-medium: #eeeeee;
+    --neutral-dark: #000000;
+    --text-color: #000000;
+    --text-light: #333333;
+    --white: #ffffff;
+  }
+  
+  /* Anxiety-friendly focus indicators */
+  .gentle-focus a:focus,
+  .gentle-focus button:focus,
+  .gentle-focus input:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 3px;
+    box-shadow: none;
+    transition: outline 0.2s ease;
+  }
+  
+  /* Simplified layout for cognitive load reduction */
+  .simplified-layout .header {
+    padding: 1rem;
+  }
+  
+  .simplified-layout .nav ul {
+    gap: 1rem;
+  }
+  
+  .simplified-layout .feature-cards,
+  .simplified-layout .disorder-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .simplified-layout section {
+    padding: 3rem 1rem;
+  }
+  
+  .simplified-layout h1 {
+    font-size: 2rem;
+  }
+  
+  .simplified-layout h2 {
+    font-size: 1.5rem;
+  }
+  
+  .simplified-layout h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Reduce animation for those with sensory sensitivities */
+  .reduce-animation *,
+  .reduce-animation *::before,
+  .reduce-animation *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .reduce-animation .card:hover,
+  .reduce-animation .disorder-card:hover {
+    transform: none;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Text spacing for better readability */
+  .improve-readability {
+    word-spacing: 0.1rem;
+    line-height: 1.8;
+  }
+  
+  .improve-readability p,
+  .improve-readability li {
+    max-width: 70ch;
+  }
+  
+  /* Visual noise reduction */
+  .reduce-visual-noise {
+    --box-shadow: none;
+  }
+  
+  .reduce-visual-noise .card,
+  .reduce-visual-noise .disorder-card,
+  .reduce-visual-noise .testimonial {
+    border: 1px solid var(--neutral-medium);
+    box-shadow: none;
+  }
+  
+  /* Larger clickable areas for reduced precision */
+  .larger-targets a,
+  .larger-targets button {
+    padding: 0.8rem 1.2rem;
+    margin: 0.3rem 0;
+  }
+  
+  .larger-targets .nav a {
+    padding: 0.6rem 1rem;
+    display: inline-block;
+  }
+  
+  /* Guided focus for ADHD */
+  .guided-focus section {
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .guided-focus section:target,
+  .guided-focus section:focus-within {
+    border-left-color: var(--accent-color);
+  }
+  
+  /* Controls for accessibility features */
+  .accessibility-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .accessibility-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    z-index: 1001;
+  }
+  
+  .accessibility-toggle:focus {
+    outline: var(--focus-outline);
+  }
+  
+  /* Breathing aid overlay */
+  .breathing-aid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(74, 111, 165, 0.2);
+    z-index: 1002;
+    animation: breathing 5s infinite ease-in-out;
+    display: none;
+  }
+  
+  .breathing-aid-active .breathing-aid {
+    display: block;
+  }
+  
+  @keyframes breathing {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+      background-color: rgba(74, 111, 165, 0.2);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      background-color: rgba(74, 111, 165, 0.5);
+    }
+  }
+  
+  /* Customizable text size */
+  .text-size-medium {
+    font-size: 18px;
+  }
+  
+  .text-size-large {
+    font-size: 20px;
+  }
+  
+  .text-size-xl {
+    font-size: 22px;
+  }
+  
+  /* Line focus mode for reading difficulties */
+  .line-focus p:hover,
+  .line-focus li:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+  }

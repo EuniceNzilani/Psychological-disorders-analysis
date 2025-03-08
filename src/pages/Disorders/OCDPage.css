@@ -1,0 +1,251 @@
+/* OCDPage.css */
+/* Base styles */
+:root {
+    --primary-color: #4a6fa5; /* Calming blue */
+    --accent-color: #2e9c8a; /* Soothing teal */
+    --neutral-light: #f5f7fa;
+    --text-color: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+  }
+  
+  /* Fullscreen page container */
+  .ocd-page {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding: 2rem;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white); /* Ensure the background is white */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  /* Headings */
+  .ocd-page h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .ocd-page h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .ocd-page h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  .ocd-page h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraphs */
+  .ocd-page p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    max-width: 800px; /* Limit paragraph width for better readability */
+  }
+  
+  /* Lists */
+  .ocd-page ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    max-width: 800px; /* Limit list width for better readability */
+  }
+  
+  .ocd-page ul li {
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  /* Callout for important information */
+  .ocd-page .callout {
+    background-color: var(--neutral-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    max-width: 800px; /* Limit callout width for better readability */
+  }
+  
+  .ocd-page .callout p {
+    margin-bottom: 0;
+    color: var(--text-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ocd-page {
+      padding: 1rem;
+    }
+  
+    .ocd-page h1 {
+      font-size: 2rem;
+    }
+  
+    .ocd-page h2 {
+      font-size: 1.75rem;
+    }
+  
+    .ocd-page h3 {
+      font-size: 1.25rem;
+    }
+  }
+  /* OCDPage.css */
+/* OCDPage.css */
+/* Fullscreen page container */
+.ocd-page {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding: 2rem;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white); /* Ensure the background is white */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  /* Image container */
+  .ocd-image-container {
+    margin: 2rem 0; /* Add space above and below the image */
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  /* Larger circular image */
+  .ocd-image {
+    width: 250px; /* Increased size */
+    height: 250px; /* Ensure the image is a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    box-shadow: var(--box-shadow); /* Add a subtle shadow */
+  }
+  /* OCDPage.css */
+/* Header */
+.ocd-header {
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out logo, nav, and button */
+  }
+  
+  /* Logo */
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white); /* White text for contrast */
+  }
+  
+  /* Navbar */
+  .ocd-navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ocd-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ocd-nav-links li a {
+    color: var(--white); /* White text for contrast */
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+  }
+  
+  .ocd-nav-links li a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+    text-decoration: underline;
+  }
+  
+  /* Login Button */
+  .login-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .login-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  /* Fullscreen page container */
+  .ocd-page {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding: 2rem;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white); /* Ensure the background is white */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  /* Image container */
+  .ocd-image-container {
+    margin: 2rem 0; /* Add space above and below the image */
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  /* Larger circular image */
+  .ocd-image {
+    width: 250px; /* Increased size */
+    height: 250px; /* Ensure the image is a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    box-shadow: var(--box-shadow); /* Add a subtle shadow */
+  }
