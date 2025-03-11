@@ -4,9 +4,9 @@ import {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signInWithPopup, 
-  GoogleAuthProvider 
+  GoogleAuthProvider,
+  getAuth // Import auth directly from firebase/auth
 } from "firebase/auth";
-import { auth } from "../../firebase"; // Adjust the path if needed
 import './AuthPage.css';
 
 const AuthPage = ({ initialMode = "login" }) => {
@@ -24,7 +24,7 @@ const AuthPage = ({ initialMode = "login" }) => {
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  
+  const auth = getAuth();
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
   const backgroundRef = useRef(null);
@@ -111,15 +111,13 @@ const AuthPage = ({ initialMode = "login" }) => {
         console.log("Attempting sign-in...");
         await signInWithEmailAndPassword(auth, formData.email, formData.password);
         console.log("Sign-in successful");
-
-        // Navigate to the LandingPage after successful login
-        navigate('/');
+  
+        // Navigate to the page they were trying to access or to home if there's no saved location
+        const destination = location.state?.from?.pathname || '/home';
+        navigate(destination);
       } else {
         await createUserWithEmailAndPassword(auth, formData.email, formData.password);
         setRegistrationSuccess(true);
-
-        // Navigate to the LandingPage after successful registration
-        navigate('/');
       }
     } catch (error) {
       console.error("Sign-in error:", error);
@@ -134,15 +132,15 @@ const AuthPage = ({ initialMode = "login" }) => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-      // Navigate to the LandingPage after successful Google authentication
-      navigate('/');
+      // Navigate to the page they were trying to access or to home
+      const destination = location.state?.from?.pathname || '/home';
+      navigate(destination);
     } catch (error) {
       setErrors({ general: error.message });
     } finally {
       setIsLoading(false);
     }
   };
-
   const switchMode = () => {
     setRegistrationSuccess(false);
     if (isLogin) {
@@ -177,7 +175,7 @@ const AuthPage = ({ initialMode = "login" }) => {
         <div className="auth-header">
           <div className="logo">
             <span className="logo-icon"></span>
-            <h1>MindEase</h1>
+            <h1>MindfulPath</h1>
           </div>
           <h2>{isLogin ? 'Welcome Back' : 'Create Your Account'}</h2>
           <p className="subtitle">

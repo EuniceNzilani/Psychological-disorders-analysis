@@ -31,6 +31,21 @@ function Community() {
             <p>Share and learn coping strategies.</p>
             <button>Join Group</button>
           </div>
+          <div className="group-card">
+            <h3>Depression Support Group</h3>
+            <p>Find support and understanding for depression.</p>
+            <button>Join Group</button>
+          </div>
+          <div className="group-card">
+            <h3>Bipolar Support Group</h3>
+            <p>Connect with others managing bipolar disorder.</p>
+            <button>Join Group</button>
+          </div>
+          <div className="group-card">
+            <h3>PTSD Support Group</h3>
+            <p>A safe space for individuals dealing with PTSD.</p>
+            <button>Join Group</button>
+          </div>
         </div>
       </section>
       <Footer />

@@ -5,9 +5,9 @@ import Footer from '../../components/Footer';
 
 function About() {
   return (
-
     <div className="about">
-       <Header />
+      <Header />
+      
       {/* About MindEase Section */}
       <section className="section">
         <h2>About MindEase</h2>
@@ -17,7 +17,7 @@ function About() {
           </p>
         </div>
       </section>
-      
+
       {/* Our Services Section */}
       <section className="section">
         <h2>Our Services</h2>
@@ -43,31 +43,31 @@ function About() {
           </div>
         </div>
       </section>
-      
+
       {/* Our Team Section */}
       <section className="section">
         <h2>Our Team</h2>
         <div className="content-container">
           <div className="card team-card">
-            <img src="/api/placeholder/150/150" alt="Dr. Jane Doe" />
-            <h3>Dr. Jane Doe</h3>
+            <img src="/assets/images/person1.jpeg" alt="Dr. Jane Mwangi" />
+            <h3>Dr. Jane Mwangi</h3>
             <p>Clinical Psychologist & Founder</p>
           </div>
           
           <div className="card team-card">
-            <img src="/api/placeholder/150/150" alt="John Smith" />
-            <h3>John Smith</h3>
+            <img src="/assets/images/person2.jpeg" alt="Aaron Omondi" />
+            <h3>Aaron Omondi</h3>
             <p>Chief Technology Officer</p>
           </div>
           
           <div className="card team-card">
-            <img src="/api/placeholder/150/150" alt="Dr. Sarah Lee" />
-            <h3>Dr. Sarah Lee</h3>
+            <img src="/assets/images/person3.jpeg" alt="Lilian Mueni" />
+            <h3>Lilian Mueni</h3>
             <p>Head of Research</p>
           </div>
         </div>
       </section>
-      
+
       {/* Our Approach Section */}
       <section className="section">
         <h2>Our Approach</h2>
@@ -84,8 +84,9 @@ function About() {
           </div>
         </div>
       </section>
+
       <Footer />
-</div>
+    </div>
   );
 }
 

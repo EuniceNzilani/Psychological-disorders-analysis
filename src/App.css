@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+/* Profile button styles - you can adjust position as needed */
+.profile-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: var(--accent-color-hover, #4338ca);
+}
+
+/* Dark mode adjustments */
+.dark-mode .profile-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

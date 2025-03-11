@@ -14,17 +14,14 @@ function ProtectedRoute({ children }) {
       setLoading(false);
     });
 
-    // Cleanup subscription
-    return () => unsubscribe();
+    return () => unsubscribe(); // Cleanup subscription
   }, []);
 
   if (loading) {
-    // You can render a loading spinner here
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // Replace with a spinner if needed
   }
 
   if (!authenticated) {
-    // Redirect to login page and save the location they were trying to access
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

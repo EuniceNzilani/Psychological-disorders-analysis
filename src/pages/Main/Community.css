@@ -67,3 +67,68 @@
     margin-bottom: 2rem;
     color: #333333; /* Added color property for better visibility */
   }
+  .community {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.community-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.community-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.community-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333333; /* Added color property for better visibility */
+}
+
+.community-groups {
+    margin-top: 4rem;
+}
+
+.community-groups h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.group-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 1.5rem; /* Adds space between cards */
+}
+
+.group-card {
+    background-color: #f5f9fc;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.group-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.group-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.group-card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}

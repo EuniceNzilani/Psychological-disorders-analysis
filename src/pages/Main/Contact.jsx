@@ -147,21 +147,21 @@ function Contact() {
             <i className="fas fa-map-marker-alt"></i>
             <div>
               <h3>Our Address</h3>
-              <p>123 Business Avenue, Suite 100, City, Country</p>
+              <p>123 Business Avenue, Suite 100, Nairobi, Kenya</p>
             </div>
           </div>
           <div className="info-item">
             <i className="fas fa-phone-alt"></i>
             <div>
               <h3>Phone Number</h3>
-              <p>+1 (123) 456-7890</p>
+              <p>+254794846559</p>
             </div>
           </div>
           <div className="info-item">
             <i className="fas fa-envelope"></i>
             <div>
               <h3>Email Address</h3>
-              <p>contact@yourcompany.com</p>
+              <p>eunicenzilani881@.com</p>
             </div>
           </div>
           <div className="info-item">
